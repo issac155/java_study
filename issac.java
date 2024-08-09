@@ -107,6 +107,7 @@
 // }
 
 // public class issac {
+<<<<<<< Updated upstream
 
 //     public static void main(String[] args) {
 
@@ -324,3 +325,50 @@ public class issac{
         }
     }
 }
+=======
+
+//     public static void main(String[] args) {
+
+//         for(int i = 0; i<4; i++){
+//             for (int j=0; j<4;j++){
+//                 System.out.print("$");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+// public class issac{
+//     public static void main(String[] args){
+
+//         for(int i= 0 ; i<4;i++){//row 0 1 2 i = 1 ,j =0 i= 1 j = 1 
+//             for (int j=0;j<i;j++){//col 
+//                 System.out.print("*");
+//             }
+//             System.out.println("");
+//         }
+//     } 
+// }
+
+
+// class demo{
+//     String name;
+
+//     int age;
+
+
+//     void view(){
+//         System.out.println("My name is "+name+"my age is "+age);
+//     }
+// }
+// public class issac{
+//     public static void main(String[] args){
+//     demo obj = new demo();
+//       obj.name = "issac";
+//       obj.age= 24;
+//       obj.view();
+
+//     }
+// }
+>>>>>>> Stashed changes
