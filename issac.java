@@ -106,15 +106,218 @@
 //      }
 // }
 
-public class issac {
+// public class issac {
+
+//     public static void main(String[] args) {
+
+//         for(int i = 0; i<4; i++){
+//             for (int j=0; j<4;j++){
+//                 System.out.print("$");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// public class issac {
+
+//     public static void main(String[] args) {
+        
+//         for (int i=0;i<4;i++){
+//             for (int j=0; j<4;j++){
+//                 if (i==0||i==3||j==0||j==3){
+//                     System.out.print("*");
+//                 }
+//                 else{
+//                     System.out.print("");
+//                 }
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+// public class issac {
+
+//     public static void main(String[] args) {
+
+//         int row = 4;
+//         for (int i =0; i<row; i++){
+//             for(int j=0; j<i; j++){
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+
+
+
+
+// When i = 0, the inner loop does not execute because j < i is false (since 0 < 0 is false). Thus, nothing is printed, and a newline is added.
+// When i = 1, the inner loop runs once (j = 0), printing one asterisk (*) followed by a newline.
+// When i = 2, the inner loop runs twice (j = 0, 1), printing two asterisks (**) followed by a newline.
+// When i = 3, the inner loop runs thrice (j = 0, 1, 2), printing three asterisks (***) followed by a newline.
+
+
+// class ABC{
+
+//     int num1;
+// int num2 ;
+// int Result;
+
+//     ABC(){
+// num1 = 10;
+// num2 =20;
+
+
+//     }
+
+//     void add(){
+// Result = num1+num2;
+// System.out.println("Sum of num1 and num2 is "+Result);
+//     }
+// }
+//     public class issac {
+    
+//         public static void main(String[] args) {
+//             ABC obj =new ABC();
+//             obj.add();
+//     }
+// }
+
+
+// class Cal{
+//     int num1;
+//     int num2;
+//     int Result;
+
+//     void sum(int a,int b){
+
+//         num1 = a;
+//         num2 =b;
+//         System.out.println(num1+num2);
+
+
+//     }
+//     void sum(double a, double b){
+//         num1 = (int)a;
+//         num2 = (int)b;
+//         System.out.println(num1+num2);
+
+//     }
+
+// }
+
+// public class issac {
+
+//     public static void main(String[] args){
+//         Cal obj = new Cal();
+//         obj.sum(10,20);
+//         obj.sum(10.5,60.5);
+//     }
+// }
+
+// Class Add{
+//     int num1;
+//     int num2;
+
+//     public int  add (){
+    
+        
+//     }
+// }
+
+// class grandparent {
+//     int a ;
+//     void display(){
+//         System.out.println("Parent");
+//     }
+
+// }
+
+// class parent extends grandparent{
+//     int b;
+//     void show(){
+//         System.out.println("Child");
+//     }
+// }
+
+// class child extends parent{
+//     int c;
+//     void print(){
+//         System.out.println("Child");
+//     }
+// }
+
+// public class issac{
+//     public static void main(String[] args){
+
+//         child obj = new  child();
+//         obj.a = 10;
+//         obj.b = 30;
+//         obj.c = 50;
+//         obj.display();
+//         obj.show();
+//         obj.print();
+//         System.out.println(obj.a);
+        
+//     }
+// }
+// class Solution {
+//     public int[] twoSum(int[] nums, int target) {
+//         // Create an empty map to store numbers and their indices
+//         Map<Integer, Integer> map = new HashMap<>();
+        
+//         // Loop through the array
+//         for (int i = 0; i < nums.length; i++) {
+//             // Calculate the complement
+//             int complement = target - nums[i];
+            
+//             // Check if the complement exists in the map
+//             if (map.containsKey(complement)) {
+//                 // If it exists, return the indices
+//                 return new int[]{i, map.get(complement)};
+//             }
+            
+//             // If it doesn't exist, add the current number and its index to the map
+//             map.put(nums[i], i);
+//         }
+        
+//         // If no pair is found, return null
+//         return null;
+//     }
+// }
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class issac{
+
+    public int[] twoSum(int[] num, int target){
+
+        Map<Integer,Integer>Map = new HashMap<>();
+
+        for ( int i = 0; i<num.length; i++){
+            int ans = target- num[i];
+
+            if (Map.containsKey(ans)){
+                return new int[] { Map.get(ans) ,i};
+            }
+            Map.put(num[i], i);
+        }
+        return null;
+    }
 
     public static void main(String[] args) {
-
-        for(int i = 0; i<4; i++){
-            for (int j=0; j<4;j++){
-                System.out.print("$");
-            }
-            System.out.println();
+        issac obj = new issac();
+        int[] num = {2, 7, 11, 15};
+        int target = 9;
+        int[] result = obj.twoSum(num, target);
+        if (result != null) {
+            System.out.println("Indices: " + result[0] + ", " + result[1]);
+        } else {
+            System.out.println("null");
         }
     }
 }
