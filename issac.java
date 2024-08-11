@@ -292,35 +292,66 @@
 //two sum
 
 
-import java.util.HashMap;
-import java.util.Map;
+// import java.util.HashMap;
+// import java.util.Map;
 
-public class issac{
+// public class issac{
 
-    public int[] twoSum(int[] num, int target){
+//     public int[] twoSum(int[] num, int target){
 
-        Map<Integer,Integer>Map = new HashMap<>();
+//         Map<Integer,Integer>Map = new HashMap<>();
 
-        for ( int i = 0; i<num.length; i++){
-            int ans = target- num[i];
+//         for ( int i = 0; i<num.length; i++){
+//             int ans = target- num[i];
 
-            if (Map.containsKey(ans)){
-                return new int[] { Map.get(ans) ,i};
-            }
-            Map.put(num[i], i);
-        }
-        return null;
+//             if (Map.containsKey(ans)){
+//                 return new int[] { Map.get(ans) ,i};
+//             }
+//             Map.put(num[i], i);
+//         }
+//         return null;
+//     }
+
+//     public static void main(String[] args) {
+//         issac obj = new issac();
+//         int[] num = {2, 7, 11, 15};
+//         int target = 9;
+//         int[] result = obj.twoSum(num, target);
+//         if (result != null) {
+//             System.out.println("Indices: " + result[0] + ", " + result[1]);
+//         } else {
+//             System.out.println("null");
+//         }
+//     }
+// }
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        
+    int temp = x;
+    int rev = 0;
+
+    while(x>0){
+       int  digit = x%10;
+        rev = (rev*10)+digit;
+       x= x/10;
     }
 
-    public static void main(String[] args) {
-        issac obj = new issac();
-        int[] num = {2, 7, 11, 15};
-        int target = 9;
-        int[] result = obj.twoSum(num, target);
-        if (result != null) {
-            System.out.println("Indices: " + result[0] + ", " + result[1]);
-        } else {
-            System.out.println("null");
-        }
+    if (rev==temp){
+        return true;
+
+    }
+    else{
+        return false;
+    }
     }
 }
+
+// solved 
+
+
+// var declaration given value in temp 
+// another one as rev store rev value
+//an loop next check x value greater that o
+// first take module of x by 10 save in a variable digit
+// then rev
